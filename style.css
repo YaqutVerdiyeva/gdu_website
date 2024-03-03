@@ -28,10 +28,10 @@
         a {
           text-decoration: none;
           color: #c49833;
-        }
-        :hover {
-          color: #d9d86f;
-          transition: 0.2s;
+          &:hover {
+            color: #d9d86f;
+          }
+          transition: 0.3s ease;
         }
       }
     }
@@ -65,8 +65,8 @@
         font-size: 15px;
         font-weight: 400;
         letter-spacing: 2px;
+        transition: 0.5s;
         &:hover {
-          transition: 0.5s;
           cursor: pointer;
           background-color: rgb(141, 128, 98, 0.7);
         }
@@ -134,9 +134,9 @@
             border-radius: 0px;
             margin: 20px 0;
             color: rgb(117, 115, 115);
+            transition: 0.3s;
             &:hover {
               cursor: pointer;
-              transition: 0.3s;
               color: red;
               background-color: #e6e6e6;
             }
@@ -303,13 +303,214 @@
         border-radius: 0px;
         margin: 10px 0;
         color: #3b3b3b;
+        transition: 0.3s;
         &:hover {
           cursor: pointer;
-          transition: 0.3s;
           color: red;
           background-color: #e6e6e6;
         }
       }
     }
+  }
+}
+.photos-section {
+  padding: 50px 0;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    .head-text {
+      display: flex;
+      justify-content: center;
+      background-color: #700000;
+      p {
+        color: #fff;
+        font-size: 20px;
+        padding: 3px;
+      }
+    }
+    .photos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .row {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: 32.5%;
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+.contact-section {
+  .first-contact-section {
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/GDU-I-Korpus-1024x559.jpg");
+    .texts {
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      color: #fff;
+      h1 {
+        font-weight: 400;
+        padding-bottom: 20px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        li {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          i {
+            background-color: #700000;
+            padding: 8px;
+            border-radius: 50%;
+          }
+          p {
+            font-weight: 900;
+          }
+        }
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      transition: 0.5s ease-in-out;
+    }
+  }
+  .second-contact-section {
+    padding: 30px 0 150px 0;
+    background-color: #f7f7f7;
+    height: 500px;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      form {
+        display: flex;
+        flex-direction: column;
+        input {
+          width: 350px;
+          height: 40px;
+          border: 1px solid #c2bcbc;
+          padding: 0 8px;
+          &:focus {
+            outline: none;
+          }
+        }
+        label {
+          padding-top: 30px;
+          font-weight: 700;
+          color: #3b3b3b;
+        }
+        textarea {
+          border: 1px solid #c2bcbc;
+          padding: 10px;
+          &:focus {
+            outline: none;
+          }
+        }
+        .submit-btn {
+          margin: 30px 0;
+          background-color: #ed1e24;
+          height: 40px;
+          color: #fff;
+          border-radius: 3px;
+          border: none;
+          width: 120px;
+          font-weight: 500;
+          font-size: 16px;
+          letter-spacing: 1px;
+          &:hover {
+            cursor: pointer;
+            background-color: #000000;
+          }
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  .third-contact-section {
+    padding: 100px 0;
+    .photos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      img {
+        width: 180px;
+        height: 120px;
+      }
+    }
+  }
+}
+.footer {
+  padding: 50px 0;
+  background-color: #400000;
+  background-image: url("http://yeni.gdu.edu.az/wp-content/uploads/2018/07/bg2.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  .arrow {
+    font-size: 50px;
+    position: relative;
+    top: 0;
+    &:hover {
+      color: #c49833;
+      top: -30px;
+    }
+    transition: 0.4s ease-in;
+  }
+  .icons {
+    padding: 20px 0 40px 0;
+    display: flex;
+    gap: 10px;
+    .fa-facebook-f {
+      background-color: #4267b2;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .fa-google-plus-g {
+      background-color: #e14b3e;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .fa-youtube {
+      background-color: #ff0000;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .text {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 }
